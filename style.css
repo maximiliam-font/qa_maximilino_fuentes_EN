@@ -213,16 +213,52 @@ nav ul li a:hover {
 
 /* ------------------------------------- */
 
+/* ------------------------------------- */
 /* ESTILO DE IMAGEN DE PERFIL (SOBRE MÍ) */
-
 /* ------------------------------------- */
 
+.profile-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* Contenedor circular PERFECTO */
+.profile-image {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+
+    /* HACE AL CONTENEDOR REDONDO */
+    border-radius: 50%;
+
+    /* Evita recuadros o esquinas */
+    overflow: hidden;
+
+    /* Opcional: elimina borde si quieres cero recuadros */
+    border: none;
+
+    /* Sombra ligera (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen perfectamente adaptada */
 .profile-photo {
-    width: 250px;          /* Ajusta según el tamaño que quieras */
-    height: 250px;         /* Debe ser igual al width para mantenerla circular */
-    border-radius: 50%;    /* Esto la hace redonda */
-    object-fit: cover;     /* Asegura que la imagen se recorte correctamente */
-    background-color: transparent; /* Solo por si acaso */
-    display: block;
-    margin: 0 auto;        /* Centra la foto si es necesario */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* redundante pero garantiza redondez */
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
