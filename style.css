@@ -209,43 +209,13 @@ nav ul li a:hover {
     color: var(--color-accent);
 }
 
-```css
-/* ------------------------------------- */
-/* ESTILO DE IMAGEN DE PERFIL (SOBRE MÍ) */
-/* ------------------------------------- */
-
-/* Define el contenedor de la imagen y el texto (Layout en 2 columnas) */
-.profile-layout {
-    display: flex;
-    gap: 40px; /* Espacio entre la foto y el texto */
-    align-items: flex-start; /* Alinea el inicio del texto con el inicio de la foto */
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-/* Contenedor de la foto para darle un tamaño fijo */
+/* Contenedor de la foto para darle un tamaño fijo (CÓDIGO CORREGIDO) */
 .profile-image {
     flex-shrink: 0; /* Evita que la foto se encoja */
     width: 250px; /* Tamaño deseado de la foto */
     height: 250px;
     overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del círculo */
-    border: 3px solid var(--color-accent); /* Borde sutil del color de acento */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
-}
-
-/* Estilo para hacer la imagen redonda (CRUCIAL) */
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
-    border-radius: 50%; /* Hace la imagen perfectamente redonda */
-}
-
-/* Estilo responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-    .profile-layout {
-        flex-direction: column; /* Apila la imagen y el texto en pantallas pequeñas */
-        align-items: center; /* Centra la foto */
-        gap: 20px;
-    }
+    /* **ELIMINAMOS estas líneas que creaban el recuadro** */
+    /* border: 3px solid var(--color-accent); */ 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */ 
 }
